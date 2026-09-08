@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorilla Supplements - Vitrina Digital</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0C10',
+                            darker: '#050508',
+                            gray: '#1F2833',
+                            lightgray: '#C5C6C7',
+                            orange: '#FF6B00', /* Naranja Gorilla */
+                            orangeHover: '#E05E00'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-darker text-white font-sans antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- HEADER / NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="./gorilla_supplements_logo.png" alt="Gorilla Supplements Logo" class="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="font-display font-black text-xl tracking-wider text-white group-hover:text-brand-orange transition-colors duration-300">GORILLA</span>
+                    <span class="text-xs text-brand-orange font-bold uppercase tracking-widest -mt-1">SUPPLEMENTS</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#nutricion" class="text-sm font-medium text-brand-lightgray hover:text-brand-orange transition-colors duration-200">Nutrición & Suplementación</a>
+                <a href="#motivacion" class="text-sm font-medium text-brand-lightgray hover:text-brand-orange transition-colors duration-200">Motivación & Progreso</a>
+                <a href="#entrenamiento" class="text-sm font-medium text-brand-lightgray hover:text-brand-orange transition-colors duration-200">Entrenamiento</a>
+            </nav>
+
+            <!-- Contact Header CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="mailto:suplementospage@gmail.com" class="text-xs text-brand-lightgray hover:text-brand-orange flex items-center gap-2 transition-colors">
+                    <i class="fa-regular fa-envelope text-brand-orange"></i>
+                    suplementospage@gmail.com
+                </a>
+                <a href="https://wa.me/573113048723" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-white px-4 py-2 rounded-lg text-sm font-bold tracking-wide transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-brand-orange/20">
+                    <i class="fa-brands fa-whatsapp mr-2"></i>Escríbenos
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-brand-orange focus:outline-none" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-brand-gray/50 px-4 py-4 space-y-3 transition-all duration-300">
+            <a href="#nutricion" class="block text-base font-medium text-brand-lightgray hover:text-brand-orange py-2">Nutrición & Suplementación</a>
+            <a href="#motivacion" class="block text-base font-medium text-brand-lightgray hover:text-brand-orange py-2">Motivación & Progreso</a>
+            <a href="#entrenamiento" class="block text-base font-medium text-brand-lightgray hover:text-brand-orange py-2">Entrenamiento</a>
+            <hr class="border-brand-gray/30 my-2">
+            <a href="mailto:suplementospage@gmail.com" class="block text-sm text-brand-lightgray hover:text-brand-orange py-1">
+                <i class="fa-regular fa-envelope text-brand-orange mr-2"></i>suplementospage@gmail.com
+            </a>
+            <a href="https://wa.me/573113048723" target="_blank" class="w-full flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white py-2.5 rounded-lg text-sm font-bold tracking-wide transition-colors">
+                <i class="fa-brands fa-whatsapp mr-2"></i>Escríbenos por WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        
+        <!-- HERO SECTION (PORTADA PRINCIPAL) -->
+        <section class="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden bg-gradient-to-b from-brand-dark to-brand-darker py-16 md:py-24 border-b border-brand-gray/20">
+            <!-- Decorative Background Gradients/Glows -->
+            <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-orange/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Text Content (Col-7) -->
+                    <div class="lg:col-span-7 flex flex-col space-y-8 text-center lg:text-left">
+                        
+                        <!-- Badge / Tag -->
+                        <div class="inline-flex items-center justify-center lg:justify-start gap-2 self-center lg:self-start bg-brand-gray/60 border border-brand-orange/20 rounded-full py-1.5 px-4">
+                            <span class="flex h-2 w-2 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
+                            </span>
+                            <span class="text-xs font-bold tracking-widest text-brand-orange uppercase">Vitrina Virtual Activa</span>
+                        </div>
+
+                        <!-- Brand Title -->
+                        <div class="space-y-2">
+                            <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none">
+                                GORILLA <br class="hidden sm:inline">
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-500">SUPPLEMENTS</span>
+                            </h1>
+                            <p class="text-brand-orange font-bold text-sm sm:text-base tracking-widest uppercase">
+                                Potencia tu rendimiento y alcanza tu mejor versión
+                            </p>
+                        </div>
+
+                        <!-- EXACT OFFICIAL SLOGAN -->
+                        <blockquote class="border-l-4 lg:border-brand-orange lg:pl-6 text-brand-lightgray text-base sm:text-lg lg:text-xl italic font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            "El cambio no sucede de la noche a la mañana. Se construye con disciplina, esfuerzo y constancia. Empieza hoy y deja que tus resultados hablen por ti."
+                        </blockquote>
+
+                        <!-- Value Propositions / Highlights -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto lg:mx-0 text-left pt-2">
+                            <div class="flex items-start gap-3 bg-brand-gray/30 p-4 rounded-xl border border-brand-gray/50">
+                                <div class="bg-brand-orange/10 p-2 rounded-lg text-brand-orange">
+                                    <i class="fa-solid fa-truck-fast text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-white">Entrega Rápida</h3>
+                                    <p class="text-xs text-brand-lightgray mt-0.5">Pedidos gestionados al instante y despachados por red social.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 bg-brand-gray/30 p-4 rounded-xl border border-brand-gray/50">
+                                <div class="bg-brand-orange/10 p-2 rounded-lg text-brand-orange">
+                                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-white">Garantía Total</h3>
+                                    <p class="text-xs text-brand-lightgray mt-0.5">Aseguramos la máxima calidad, originalidad y oportunidad.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Calls to Action -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#categorias" class="w-full sm:w-auto bg-brand-orange hover:bg-brand-orangeHover text-white px-8 py-4 rounded-xl text-base font-bold tracking-wide transition-all duration-300 text-center shadow-lg shadow-brand-orange/30 hover:shadow-brand-orange/50 hover:-translate-y-1">
+                                <i class="fa-solid fa-store mr-2"></i>Explorar Catálogo
+                            </a>
+                            <a href="https://wa.me/573113048723" target="_blank" class="w-full sm:w-auto bg-brand-gray hover:bg-brand-gray/80 text-white px-8 py-4 rounded-xl text-base font-bold tracking-wide transition-all duration-300 text-center border border-brand-lightgray/20 hover:-translate-y-1">
+                                <i class="fa-brands fa-whatsapp mr-2 text-green-500"></i>Contacto Directo
+                            </a>
+                        </div>
+
+                        <!-- Store Details & Support Footer -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-4 border-t border-brand-gray/40 text-xs text-brand-lightgray">
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-regular fa-envelope text-brand-orange"></i>
+                                <a href="mailto:suplementospage@gmail.com" class="hover:underline">suplementospage@gmail.com</a>
+                            </span>
+                            <span class="hidden sm:inline text-brand-gray">•</span>
+                            <span class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-headset text-brand-orange"></i>
+                                Soporte Humano: 311 304 8723
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <!-- Visual Section (Col-5) -->
+                    <div class="lg:col-span-5 flex justify-center relative">
+                        <!-- Glow behind logo -->
+                        <div class="absolute inset-0 bg-brand-orange/20 rounded-full filter blur-3xl opacity-60 animate-pulse"></div>
+                        
+                        <!-- Visual Container -->
+                        <div class="relative bg-brand-gray/20 border border-brand-gray/50 p-6 rounded-3xl backdrop-blur-sm max-w-sm w-full shadow-2xl">
+                            <!-- Image container with ratio helper -->
+                            <div class="w-full aspect-square bg-brand-dark/50 rounded-2xl flex items-center justify-center overflow-hidden border border-brand-gray/40">
+                                <img src="./gorilla_supplements_logo.png" alt="Gorilla Supplements Identity" class="w-4/5 h-auto object-contain drop-shadow-[0_10px_30px_rgba(255,107,0,0.3)]">
+                            </div>
+                            
+                            <!-- Small tag under image -->
+                            <div class="mt-4 text-center">
+                                <p class="text-[10px] uppercase tracking-widest text-brand-lightgray font-semibold">Logotipo Oficial & Identidad de Marca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PLACEHOLDER FOR CATEGORIES -->
+        <section id="categorias" class="py-20 bg-brand-darker max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="font-display font-black text-3xl sm:text-4xl tracking-tight text-white uppercase">Nuestras Categorías</h2>
+                <div class="h-1 w-20 bg-brand-orange mx-auto rounded"></div>
+                <p class="text-brand-lightgray text-sm sm:text-base max-w-xl mx-auto">Selecciona una categoría para ver nuestros productos de alta calidad listos para entrega inmediata.</p>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Category 1 -->
+                <div id="nutricion" class="group bg-brand-gray/30 rounded-2xl border border-brand-gray/50 overflow-hidden hover:border-brand-orange/50 transition-all duration-300 flex flex-col h-full shadow-xl">
+                    <div class="h-48 bg-gradient-to-br from-brand-gray to-brand-dark flex items-center justify-center border-b border-brand-gray/50 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-bottle-water text-5xl text-brand-orange"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2 text-white group-hover:text-brand-orange transition-colors duration-200">Nutrición & Suplementación</h3>
+                            <p class="text-brand-lightgray text-xs leading-relaxed mb-4">Proteínas, aminoácidos, creatinas de la más alta calidad para alimentar tus músculos y acelerar la recuperación física.</p>
+                        </div>
+                        <a href="#nutricion-lista" class="inline-flex items-center text-xs font-bold text-brand-orange hover:text-white transition-colors">
+                            Ver Productos <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div id="motivacion" class="group bg-brand-gray/30 rounded-2xl border border-brand-gray/50 overflow-hidden hover:border-brand-orange/50 transition-all duration-300 flex flex-col h-full shadow-xl">
+                    <div class="h-48 bg-gradient-to-br from-brand-gray to-brand-dark flex items-center justify-center border-b border-brand-gray/50 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-fire text-5xl text-brand-orange"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2 text-white group-hover:text-brand-orange transition-colors duration-200">Motivación & Progreso</h3>
+                            <p class="text-brand-lightgray text-xs leading-relaxed mb-4">Pre-entrenos, estimulantes y quemadores enfocados en maximizar tu energía mental, enfoque cognitivo y fuerza física.</p>
+                        </div>
+                        <a href="#motivacion-lista" class="inline-flex items-center text-xs font-bold text-brand-orange hover:text-white transition-colors">
+                            Ver Productos <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div id="entrenamiento" class="group bg-brand-gray/30 rounded-2xl border border-brand-gray/50 overflow-hidden hover:border-brand-orange/50 transition-all duration-300 flex flex-col h-full shadow-xl">
+                    <div class="h-48 bg-gradient-to-br from-brand-gray to-brand-dark flex items-center justify-center border-b border-brand-gray/50 group-hover:scale-105 transition-transform duration-300">
+                        <i class="fa-solid fa-dumbbell text-5xl text-brand-orange"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2 text-white group-hover:text-brand-orange transition-colors duration-200">Entrenamiento</h3>
+                            <p class="text-brand-lightgray text-xs leading-relaxed mb-4">Accesorios, multivitamínicos y suplementación peri-entrenamiento ideales para sostener sesiones intensas de alto volumen.</p>
+                        </div>
+                        <a href="#entrenamiento-lista" class="inline-flex items-center text-xs font-bold text-brand-orange hover:text-white transition-colors">
+                            Ver Productos <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING ASSISTANT DISCLOSURE / CHAT AI TRIGGER -->
+        <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+            <!-- IA Assistant Hint -->
+            <div id="ia-hint" class="bg-brand-gray border border-brand-orange/30 text-white p-3 rounded-2xl text-xs shadow-2xl max-w-xs transition-all duration-500 transform translate-y-0 opacity-100 flex items-start gap-2 backdrop-blur-md">
+                <div class="bg-brand-orange/20 p-1.5 rounded-lg text-brand-orange mt-0.5 shrink-0">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <p class="font-bold">Asistente IA Gorilla</p>
+                    <p class="text-brand-lightgray mt-0.5">¿Te gustó un suplemento? Escríbeme y dime su código para detallarte sus características.</p>
+                </div>
+                <button onclick="document.getElementById('ia-hint').classList.add('opacity-0', 'pointer-events-none')" class="text-brand-lightgray hover:text-white shrink-0 ml-1">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <!-- Main CTA Floating Button -->
+            <a href="https://wa.me/573113048723" target="_blank" class="bg-brand-orange hover:bg-brand-orangeHover text-white h-14 w-14 rounded-full flex items-center justify-center shadow-2xl shadow-brand-orange/40 hover:shadow-brand-orange/60 transition-all duration-300 transform hover:scale-110 relative group" aria-label="Asistencia WhatsApp">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-brand-dark border border-brand-gray/50 px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    Chatea con nosotros
+                </span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-brand-gray/50 py-12 text-center text-xs text-brand-lightgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="./gorilla_supplements_logo.png" alt="Gorilla Supplements Logo" class="h-10 w-auto">
+                <span class="font-display font-black text-sm tracking-widest uppercase">GORILLA SUPPLEMENTS</span>
+            </div>
+            <div>
+                <p>&copy; 2026 Gorilla Supplements. Todos los derechos reservados.</p>
+                <p class="text-brand-gray mt-1">Soporte Técnico: 311 304 8723 | suplementospage@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuBtn.innerHTML = '<i class="fa-solid fa-xmark text-2xl"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+            }
+        });
+
+        // Hide mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-2xl"></i>';
+            });
+        });
+    </script>
+    <!-- 
+========================================================================
+  GORILLA SUPPLEMENTS - COMPONENTE DE CHATBOT IA INTERACTIVO
+========================================================================
+  Este archivo contiene el código HTML, CSS (Tailwind) y JavaScript listo
+  para copiar y pegar directamente en tu archivo HTML de la landing page.
+  
+  ¿Qué hace este componente?
+  1. Reemplaza el botón flotante simple por un Chatbot Interactivo "Gorilla AI" [3].
+  2. Al iniciarse, saluda motivacionalmente y solicita un código único de producto [3].
+  3. Tiene embebido todo el catálogo oficial (9 productos de las categorías
+     Nutrición, Motivación y Entrenamiento) [2].
+  4. Analiza de manera inteligente el texto del usuario para encontrar códigos (ej. NS-001, MP-002, etc.).
+  5. Muestra una animación realista de "escribiendo..." antes de responder.
+  6. Si el código existe, detalla características de suplementación, motivación y entrenamiento [3].
+  7. Si no se reconoce un código, activa el "Fallback Humano" dirigiendo al 3113048723 [3].
+========================================================================
+-->
+
+<!-- 1. CÓDIGO HTML/TAILWIND DEL CHATBOT (Insertar justo antes de cerrar el </body>) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 font-sans">
+    
+    <!-- Ventana del Chat (Oculta por defecto con 'hidden' y opacidad) -->
+    <div id="gorilla-chat-window" class="hidden flex-col bg-brand-dark border border-brand-gray/60 w-[350px] sm:w-[380px] h-[500px] rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform scale-95 opacity-0 backdrop-blur-lg">
+        <!-- Encabezado del Chat -->
+        <div class="bg-gradient-to-r from-brand-dark to-brand-gray/80 border-b border-brand-gray/50 p-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Avatar en Miniatura -->
+                <div class="relative">
+                    <div class="bg-brand-orange/20 h-10 w-10 rounded-full flex items-center justify-center border border-brand-orange/40">
+                        <i class="fa-solid fa-robot text-brand-orange text-lg"></i>
+                    </div>
+                    <span class="absolute bottom-0 right-0 h-2.5 w-2.5 bg-green-500 rounded-full border-2 border-brand-dark animate-pulse"></span>
+                </div>
+                <div>
+                    <h4 class="text-white text-sm font-bold tracking-wide">Gorilla AI</h4>
+                    <p class="text-[10px] text-green-400 font-medium">Asistente de Ventas Activo</p>
+                </div>
+            </div>
+            <!-- Cerrar Chat -->
+            <button onclick="toggleGorillaChat()" class="text-brand-lightgray hover:text-white transition-colors p-1" aria-label="Cerrar chat">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Contenedor de Mensajes (Scrollable) -->
+        <div id="gorilla-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-gradient-to-b from-brand-dark via-brand-dark/95 to-brand-gray/25 custom-scrollbar text-sm">
+            <!-- Los mensajes dinámicos se renderizan aquí -->
+        </div>
+
+        <!-- Indicador de "Escribiendo..." (Oculto por defecto) -->
+        <div id="gorilla-typing-indicator" class="hidden px-4 py-2 bg-brand-gray/25 text-brand-lightgray text-xs rounded-t-xl border-t border-brand-gray/40 flex items-center gap-2">
+            <span class="flex gap-1">
+                <span class="h-1.5 w-1.5 bg-brand-orange rounded-full animate-bounce" style="animation-delay: 0ms"></span>
+                <span class="h-1.5 w-1.5 bg-brand-orange rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+                <span class="h-1.5 w-1.5 bg-brand-orange rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+            </span>
+            <span>Gorilla AI está analizando el catálogo...</span>
+        </div>
+
+        <!-- Formulario de Entrada de Texto -->
+        <form id="gorilla-chat-form" onsubmit="handleSendGorillaMessage(event)" class="border-t border-brand-gray/50 p-3 bg-brand-dark flex items-center gap-2">
+            <input 
+                type="text" 
+                id="gorilla-user-input" 
+                placeholder="Ingresa un código (ej. NS-001, MP-002)..." 
+                class="flex-1 bg-brand-gray/40 border border-brand-gray text-white rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-orange/60 placeholder-brand-gray transition-colors"
+                autocomplete="off"
+            >
+            <button type="submit" class="bg-brand-orange hover:bg-brand-orangeHover text-white h-8 w-8 rounded-xl flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Botón Flotante para Abrir/Cerrar Chat (Con Hint flotante opcional) -->
+    <div class="flex flex-col items-end gap-3">
+        <!-- Globo de Sugerencia Inteligente (Hint) -->
+        <div id="ia-hint" class="bg-brand-gray border border-brand-orange/30 text-white p-3 rounded-2xl text-xs shadow-2xl max-w-xs transition-all duration-500 transform translate-y-0 opacity-100 flex items-start gap-2 backdrop-blur-md">
+            <div class="bg-brand-orange/20 p-1.5 rounded-lg text-brand-orange mt-0.5 shrink-0">
+                <i class="fa-solid fa-robot animate-pulse"></i>
+            </div>
+            <div>
+                <p class="font-bold text-brand-orange">¿Dudas con un Suplemento? [3]</p>
+                <p class="text-brand-lightgray mt-0.5">Escríbeme el código de tu producto y te daré su descripción técnica detallada al instante. [3]</p>
+            </div>
+            <button onclick="document.getElementById('ia-hint').remove()" class="text-brand-lightgray hover:text-white shrink-0 ml-1">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Botón Flotante Principal -->
+        <button 
+            onclick="toggleGorillaChat()" 
+            id="gorilla-chat-trigger"
+            class="bg-brand-orange hover:bg-brand-orangeHover text-white h-14 w-14 rounded-full flex items-center justify-center shadow-2xl shadow-brand-orange/40 hover:shadow-brand-orange/60 transition-all duration-300 transform hover:scale-110 relative group"
+            aria-label="Abrir asistente de IA"
+        >
+            <i class="fa-solid fa-comments text-xl transition-transform duration-300 group-hover:rotate-12"></i>
+            <span class="absolute right-16 top-1/2 -translate-y-1/2 bg-brand-dark border border-brand-gray/50 px-3 py-1.5 rounded-lg text-xs font-bold tracking-wide whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                Consulta con Gorilla AI
+            </span>
+        </button>
+    </div>
+</div>
+
+<!-- Estilos específicos para scrollbar en el Chat (Opcionales de Tailwind o CSS puro) -->
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 107, 0, 0.2);
+        border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 107, 0, 0.4);
+    }
+</style>
+
+
+<!-- 2. SCRIPT DE INTERACCIÓN JAVASCRIPT (Insertar antes del cierre del </body>) -->
+<script>
+    // BASE DE CONOCIMIENTO EMBEBIDA (Cargada directamente desde tu catálogo oficial) [2, 3]
+    const GORILLA_DATABASE = {
+        // Categoría: Nutrición & Suplementación [2]
+        "NS-001": {
+            name: "Whey Protein Isolate - Proteína de Suero Aislada [2]",
+            price: "$180,000 COP [2]",
+            type: "Proteína en polvo de rápida absorción y alta pureza [2]",
+            quantity: "Envase de 2 lbs (907g) - 30 servicios [2]",
+            facts: "25g de proteína, 0g azúcares, bajo en carbohidratos [2]",
+            motivation: "Impulsar tu progreso post-entreno mediante la reconstrucción de fibras musculares desgastadas [2].",
+            training: "Excelente para consumirse inmediatamente después de entrenamientos intensos de fuerza o hipertrofia para optimizar la ventana anabólica [2]."
+        },
+        "NS-002": {
+            name: "Creatina Monohidratada Micronizada [2]",
+            price: "$95,000 COP [2]",
+            type: "Suplemento para incremento de potencia, fuerza y volumen muscular [2]",
+            quantity: "Envase de 300g en polvo - 60 servicios de 5g [2]",
+            facts: "100% Monohidrato de Creatina Micronizada pura sin sabor [2]",
+            motivation: "Superar tus límites de fuerza y ver un progreso real en volumen celular muscular [2].",
+            training: "Indicado para entrenamientos de potencia explosiva, sprints y levantamientos máximos. Tomar de forma continua (incluso días de no entreno) [2]."
+        },
+        "NS-003": {
+            name: "Complejo Multivitamínico Activo (Active Multi) [2]",
+            price: "$75,000 COP [2]",
+            type: "Micronutrientes esenciales y antioxidantes para deportistas [2]",
+            quantity: "Frasco de 90 cápsulas blandas - 45 porciones [2]",
+            facts: "Vitaminas A, C, D, E, complejo B completo, zinc y magnesio [2]",
+            motivation: "Mantener tus niveles de energía vitales y asegurar que tu cuerpo funcione al 100% cada mañana [2].",
+            training: "Soporte metabólico diario. Tomar con el desayuno para contrarrestar el estrés oxidativo provocado por la actividad física demandante [2]."
+        },
+
+        // Categoría: Motivación & Progreso [2]
+        "MP-001": {
+            name: "Pre-Entreno Explosivo (Pre-Workout Alpha) [2]",
+            price: "$135,000 COP [2]",
+            type: "Pre-entreno estimulante de óxido nítrico y foco cognitivo [2]",
+            quantity: "Envase de 300g sabor Fruit Punch - 30 servicios [2]",
+            facts: "Contiene Cafeína Anhidra (200mg), Beta-Alanina y L-Citrulina Malato [2]",
+            motivation: "Encender tu motivación en días de baja energía, asegurando un enfoque mental de nivel profesional [2].",
+            training: "Consumir 20 a 30 minutos antes de comenzar rutinas de alta intensidad para lograr entrenamientos intensos y congestión muscular prolongada [2]."
+        },
+        "MP-002": {
+            name: "BCAA + Electrólitos (Fórmula Intra-Entrenamiento) [2]",
+            price: "$110,000 COP [2]",
+            type: "Aminoácidos ramificados protectores del músculo y sales de rehidratación [2]",
+            quantity: "Envase de 380g sabor Limonada - 30 servicios [2]",
+            facts: "Relación 2:1:1 de Leucina, Isoleucina y Valina enriquecido con electrolitos clave [2]",
+            motivation: "Garantizar la preservación muscular durante las fases de definición o cardio prolongado [2].",
+            training: "Se bebe durante el entrenamiento de alta duración o resistencia extrema para evitar calambres y reducir la fatiga central percibida [2]."
+        },
+        "MP-003": {
+            name: "Termogénico Shred & Focus (Quemador y Concentración) [2]",
+            price: "$120,000 COP [2]",
+            type: "Quemador de grasa lipotrópico y acelerador del metabolismo basal [2]",
+            quantity: "Frasco de 60 cápsulas de origen vegetal [2]",
+            facts: "Contiene L-Carnitina Tartrato, Extracto de Té Verde y Cafeína de liberación sostenida [2]",
+            motivation: "Facilitar la pérdida de grasa y la definición muscular mediante la aceleración metabólica y control de la ansiedad [2].",
+            training: "Tomar 1 cápsula en ayunas o antes del ejercicio cardiovascular. Ideal para optimizar la quema calórica total en rutinas de déficit calórico [2]."
+        },
+
+        // Categoría: Entrenamiento [2]
+        "EN-001": {
+            name: "Soporte Articular (Joint Support & Collagen) [2]",
+            price: "$85,000 COP [2]",
+            type: "Fórmula regeneradora para articulaciones, ligamentos y tendones [2]",
+            quantity: "Envase de 240g en polvo libre de saborizantes [2]",
+            facts: "Colágeno Hidrolizado Premium, Glucosamina, Condroitina, Vitamina C [2]",
+            motivation: "Entrenar sin dolor limitante y asegurar la longevidad de tu sistema músculo-esquelético [2].",
+            training: "Uso diario preventivo. Diseñado para atletas que realizan cargas pesadas (Powerlifting, Halterofilia, CrossFit) o ejercicios con alto impacto articular [2]."
+        },
+        "EN-002": {
+            name: "L-Glutamina Micronizada Pura (Recuperador Nocturno) [2]",
+            price: "$80,000 COP [2]",
+            type: "Aminoácido anticatabólico y soporte del sistema inmunológico [2]",
+            quantity: "Envase de 300g - 60 servicios de 5g [2]",
+            facts: "Glutamina 100% pura y micronizada sin aditivos [2]",
+            motivation: "Prevenir el sobreentrenamiento físico, mejorar la salud intestinal y acelerar la recuperación nocturna [2].",
+            training: "Tomar inmediatamente después del entrenamiento o antes de dormir. Clave para esquemas de entrenamiento diario con volumen de trabajo elevado [2]."
+        },
+        "EN-003": {
+            name: "Carbohidrato Avanzado (Cluster Dextrin®) [2]",
+            price: "$145,000 COP [2]",
+            type: "Dextrina Cíclica Altamente Ramificada de rápida digestión y energía constante [2]",
+            quantity: "Envase de 1000g en polvo sin sabor [2]",
+            facts: "100% Ciclodextrina pura, sin picos súbitos de insulina [2]",
+            motivation: "Mantener tus reservas de glucógeno cargadas al máximo para un desempeño sin caídas drásticas de rendimiento [2].",
+            training: "Ideal como bebida intra-entrenamiento en rutinas muy extenuantes que superen los 90 minutos de duración, logrando un rápido vaciado gástrico sin pesadez [2]."
+        }
+    };
+
+    // Variables de Estado del Chat
+    let isChatOpen = false;
+    let chatStarted = false;
+
+    const chatWindow = document.getElementById('gorilla-chat-window');
+    const chatMessages = document.getElementById('gorilla-chat-messages');
+    const chatTrigger = document.getElementById('gorilla-chat-trigger');
+    const typingIndicator = document.getElementById('gorilla-typing-indicator');
+
+    // Función para abrir/cerrar el contenedor del chat
+    function toggleGorillaChat() {
+        isChatOpen = !isChatOpen;
+        
+        if (isChatOpen) {
+            // Mostrar y animar entrada
+            chatWindow.classList.remove('hidden');
+            setTimeout(() => {
+                chatWindow.classList.remove('scale-95', 'opacity-0');
+                chatWindow.classList.add('scale-100', 'opacity-100', 'flex');
+            }, 10);
+            
+            // Ocultar globo temporal de sugerencia
+            const iaHint = document.getElementById('ia-hint');
+            if (iaHint) iaHint.classList.add('opacity-0', 'pointer-events-none');
+
+            // Cambiar ícono del disparador
+            chatTrigger.innerHTML = '<i class="fa-solid fa-xmark text-xl transition-all duration-300"></i>';
+
+            // Iniciar saludo si es la primera vez
+            if (!chatStarted) {
+                startGorillaAssistant();
+            }
+        } else {
+            // Ocultar y animar salida
+            chatWindow.classList.remove('scale-100', 'opacity-100');
+            chatWindow.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                chatWindow.classList.add('hidden');
+                chatWindow.classList.remove('flex');
+            }, 300);
+
+            // Devolver ícono original
+            chatTrigger.innerHTML = '<i class="fa-solid fa-comments text-xl transition-all duration-300"></i>';
+        }
+    }
+
+    // Inicializar el saludo de la IA
+    function startGorillaAssistant() {
+        chatStarted = true;
+        showTyping(true);
+        
+        setTimeout(() => {
+            showTyping(false);
+            
+            // Mensaje de saludo enérgico e introductorio
+            const saludoText = `
+                <p class="font-bold text-brand-orange mb-1">¡Hola, Guerrero/a! 💪</p>
+                <p class="mb-2">Soy <strong>Gorilla AI</strong>, tu asesor experto en suplementación y rendimiento de <em>Gorilla Supplements</em> [3]. El éxito no es casualidad, ¡se entrena con constancia! [1]</p>
+                <p class="text-xs text-brand-lightgray">Para darte el reporte más completo sobre el suplemento que te interesa, <strong>por favor escríbeme el código del producto</strong> que viste en el catálogo (por ejemplo: <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">NS-001</code>, <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">MP-001</code> o <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">EN-001</code>) [3].</p>
+            `;
+            appendMessage('bot', saludoText);
+        }, 1200);
+    }
+
+    // Controlar visibilidad del indicador de escribiendo...
+    function showTyping(show) {
+        if (show) {
+            typingIndicator.classList.remove('hidden');
+            typingIndicator.classList.add('flex');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        } else {
+            typingIndicator.classList.add('hidden');
+            typingIndicator.classList.remove('flex');
+        }
+    }
+
+    // Insertar burbujas de mensaje en el DOM
+    function appendMessage(sender, text) {
+        const messageBubble = document.createElement('div');
+        messageBubble.classList.add('flex', 'flex-col', 'max-w-[85%]', 'animate-fadeIn');
+
+        if (sender === 'user') {
+            messageBubble.classList.add('ml-auto', 'items-end');
+            messageBubble.innerHTML = `
+                <div class="bg-brand-orange text-white px-3 py-2 rounded-2xl rounded-tr-none shadow-md">
+                    <p class="text-xs leading-relaxed">${text}</p>
+                </div>
+                <span class="text-[9px] text-brand-gray mt-1 font-mono">Tú</span>
+            `;
+        } else {
+            messageBubble.classList.add('mr-auto', 'items-start');
+            messageBubble.innerHTML = `
+                <div class="bg-brand-gray/40 border border-brand-gray text-white px-3 py-2.5 rounded-2xl rounded-tl-none shadow-md">
+                    <div class="text-xs leading-relaxed space-y-2 text-brand-lightgray">${text}</div>
+                </div>
+                <span class="text-[9px] text-brand-orange mt-1 font-bold">Gorilla AI</span>
+            `;
+        }
+
+        chatMessages.appendChild(messageBubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Procesar envío de formulario
+    function handleSendGorillaMessage(event) {
+        event.preventDefault();
+        const inputElement = document.getElementById('gorilla-user-input');
+        const text = inputElement.value.trim();
+
+        if (!text) return;
+
+        // Mostrar mensaje del usuario
+        appendMessage('user', text);
+        inputElement.value = '';
+
+        // Simular respuesta de la IA
+        showTyping(true);
+
+        setTimeout(() => {
+            showTyping(false);
+            processAIResponse(text);
+        }, 1500);
+    }
+
+    // Analizador de consultas e inteligencia conversacional de Gorilla AI [3]
+    function processAIResponse(rawText) {
+        const textUpper = rawText.toUpperCase();
+        
+        // Expresión regular para capturar códigos del tipo AA-NNN o AANNN (ej: NS-001, MP002)
+        const codePattern = /([A-Z]{2})-?(\d{3})/;
+        const match = textUpper.match(codePattern);
+
+        if (match) {
+            const extractedCode = `${match[1]}-${match[2]}`; // Reconstruir formato estándar (ej: NS-001)
+
+            // Buscar en nuestra base de datos
+            if (GORILLA_DATABASE[extractedCode]) {
+                const product = GORILLA_DATABASE[extractedCode];
+                
+                // Responder con la especificación del producto exacta de la base de conocimiento [2, 3]
+                const responseHTML = `
+                    <div class="border-b border-brand-gray/50 pb-2 mb-2">
+                        <span class="text-[10px] uppercase tracking-wider text-brand-orange font-mono font-bold">${extractedCode}</span>
+                        <h5 class="text-white font-bold text-sm leading-tight">${product.name}</h5>
+                        <p class="text-brand-orange font-black text-sm mt-1">${product.price}</p>
+                    </div>
+                    <div class="space-y-2 text-xs text-brand-lightgray">
+                        <p><strong>🏋️ Tipo & Porción:</strong> ${product.type}. (${product.quantity}) [2].</p>
+                        <p><strong>🔬 Ficha Nutricional:</strong> ${product.facts} [2].</p>
+                        <p><strong>🎯 Tu Motivación:</strong> ${product.motivation} [2]</p>
+                        <p><strong>⚡ En tu Entrenamiento:</strong> ${product.training} [2]</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-t border-brand-gray/40 flex justify-between gap-2">
+                        <a href="https://wa.me/573113048723?text=Hola%20Gorilla%20Supplements,%20me%20interesa%20ordenar%20el%20producto%20${extractedCode}" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-1.5 px-2 rounded-lg text-[10px] font-bold transition-colors flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp [3]
+                        </a>
+                    </div>
+                `;
+                appendMessage('bot', responseHTML);
+                return;
+            }
+        }
+
+        // Si el usuario saluda o es un texto muy corto sin código, le recordamos con dinamismo solicitar un código
+        if (textUpper.includes("HOLA") || textUpper.includes("BUENAS") || textUpper.length < 5) {
+            const recordatorioText = `
+                <p class="mb-2">¡Ese es el espíritu! Recuerda que para darte la ficha técnica oficial con la dosificación y beneficios, <strong>necesito que me indiques el código único del producto</strong> (ej: <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">NS-001</code>, <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">MP-002</code>, <code class="bg-brand-orange/10 px-1 py-0.5 rounded text-brand-orange font-mono">EN-003</code>) [3].</p>
+                <p class="text-[11px] text-brand-lightgray">Dime: ¿cuál es el código del artículo que te llamó la atención? [3]</p>
+            `;
+            appendMessage('bot', recordatorioText);
+            return;
+        }
+
+        // FALLBACK HUMANO DE EMERGENCIA (Si no coincide con nada o pregunta dudas ajenas a la guía) [3]
+        const fallbackText = `
+            <p class="font-semibold text-brand-orange mb-1">Entiendo tu consulta, guerrero/a... [3]</p>
+            <p class="mb-3">Para brindarte una mejor atención sobre esa duda en específico, por favor comunícate directamente al número telefónico <strong>3113048723</strong> para hablar con uno de nuestros asesores humanos calificados, quien te dará mayor información de inmediato [3].</p>
+            <div class="flex flex-col gap-2 w-full">
+                <a href="tel:3113048723" class="bg-brand-gray hover:bg-brand-gray/80 text-white border border-brand-orange/30 text-center py-1.5 px-2 rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-brand-orange"></i> Llamar al Asesor [3]
+                </a>
+                <a href="https://wa.me/573113048723?text=Hola,%20tengo%20una%20duda%20que%20el%20asistente%20de%20IA%20no%20pudo%20resolver..." target="_blank" class="bg-green-600 hover:bg-green-700 text-white text-center py-1.5 px-2 rounded-lg text-xs font-bold transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Chatear con Soporte [3]
+                </a>
+            </div>
+        `;
+        appendMessage('bot', fallbackText);
+    }
+</script>
+</body>
+</html>
